@@ -84,6 +84,15 @@ public class HelloWorld {
         System.out.println(++test4);
         // adding one to the MAX_VALUE will take the MAX of int down to the MIN
 
+        int myInteger = 900;
+        double morePrecise = myInteger;
+        System.out.println(morePrecise);
+        // added a decimal point
+
+        double pi = 3.14159;
+        int almostPi = (int) pi;
+        System.out.println(almostPi);
+        // parse'd the 3.14159
 
 
     }
