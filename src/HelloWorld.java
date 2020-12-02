@@ -25,7 +25,7 @@ public class HelloWorld {
         // assigning 123 to myNumber outputs 123
 
         float myNumber2 = Float.parseFloat("3.14");
-        System.out.println(myNumber2);
+        System.out.println("My number is: " + myNumber2);
         // can fix the float issues with integers by using a parseFloat()
 
         int x = 5;
