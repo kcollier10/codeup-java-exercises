@@ -1,0 +1,44 @@
+JAVA CONCEPT QUESTIONS
+
+What is the difference between compiled and interpreted languages? Static and dynamic? Which is Java, which is JavaScript?
+Java is statically typed, JavaScript is dynamically typed
+
+What does a compiler do?
+Transmits the code written by a person into machine-readable language
+
+What is a virtual machine?
+Doesn’t interfere with actual function of the computer itself
+
+What is the difference between bytecode and source code files?
+Source code is computer-readable instructions
+Bytecode is source code
+
+Do you need the JDK or the JRE to play minecraft?
+JRE
+
+Why would you use an IDE as opposed to a simple text editor when writing Java code?
+IDE will automatically compile for you
+
+What is the purpose of the out directory?
+Contains project’s output/.class files whenever it’s compiled
+
+Why does Java have multiple number data types? Why use one over the other?
+Each one has different number of bytes
+
+Is a string a primitive type in Java?
+No, reference type
+
+What is the difference between explicit and implicit casting? What are specific examples?
+Implicit (widening)
+Explicit (narrow)
+In implicit, you’re going from a less specific type to a more specific type. No extra code here, so the cast is done implicitly
+In implicit casting, you don’t have to define the type in parentheses
+If we want to go from a high precision type to a lower precision type, we need to explicitly put the name of type we are casting inside the parentheses
+
+What are some differences between char and String types?
+Char is a primitive type and can hold one character
+String is a reference type (aka a full-blown object) so it can take in/hold any number of characters
+
+What happens if you store a number in a variable greater than the data type’s constraints?
+It jumps back to the first number
+Aka if you raise the byte value over the max of 127 to 128, it will skip 28 and go back to the first available value (-128)
