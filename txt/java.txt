@@ -1,0 +1,46 @@
+JAVA INTRO READING QUESTIONS
+
+
+What is the difference between a .java and .class file?
+* .class -> compiled (for JVM)
+* .java -> source (for humans)
+-.java usually holds your code in clear text
+-.class contains the byte code of your .java. (Think of it as a compiled version of the .java file)
+
+Why are we using an IDE (IntelliJ) instead of a simple text editor for writing Java code?
+-Java, on the other hand, is very verbose and has a lot of boilerplate (90% of member variables will need getter and setter functions, for instance) that an IDE can generate for you.
+-The only reason to avoid an IDE is to find out how badly you need one.
+
+What is the difference between a JRE and a JDK?
+* the JRE is necessary to run Java applications
+* the JDK is necessary to create and build Java applications
+
+
+Are we currently learning about JavaSE, JavaEE, JavaME, or JavaFX?
+JavaSE (Standard Edition)
+* Contains the core functionality of the Java language
+* Provides facilities for networking, security, database access, GUI development, and XML parsing
+* Includes the JVM - Java Virtual Machine
+* development + deployment tools
+JavaEE (Enterprise Edition)
+* Facilities for building large-scale enterprise-level applications
+* Contains the Servlet, JSP, and JDBC libraries, among others. We'll explore these more in the Java III section.
+
+
+What are some key differences between JavaScript and Java?
+* Java is compiled while JavaScript is interpreted.
+* Java is statically typed while JavaScript has dynamic typing.
+* While JavaScript does have objects, there is much more focus on them in Java, and the way they are defined and used is quite different.
+* JavaScript runs (mostly) in the browser, while Java runs almost everywhere.
+* Java code must be compiled, and JavaScript code is all-text.
+* Each language requires different plug-ins.
+* JavaScript code is run on a browser only, while Java creates applications that run in a virtual machine or browser.
+* Java is an OOP (object-oriented programming) language, and JavaScript is specifically an OOP scripting language.
+
+
+Describe in some detail the process by which a Java program is able to run on an operating system.
+We write Java source code, send it through a compiler via IDE, compiler outputs  compile-time errors or .class in byte code for the machine, byte code is run on the JVM, JVM turns byte code into machine code, return of run-time errors or output, operating system reads the machine code
+
+Why is Java touted as a “write once, run anywhere” language?
+Because the code runs on the cross-platform Java Virtual Machine, developers can write a Java program on a Windows laptop, then run it on a Linux or Solaris server without recompiling the code for the new platform
+This means a programmer can develop Java code on one system and can expect it to run on any other Java-enabled system without any adjustment. This is all possible because of JV
