@@ -12,15 +12,34 @@ public class ControlFlowExercises {
 //
 //        System.out.println("-----------------");
 
-//        int i = 1;
+//        int i = 0;
 //
 //        do {
-//            if(i % 2 == 0) {
-//                System.out.print(i + "\n");
-//            }
-//            i++;
+//            i+= 2;
+//            System.out.println(i);
 //        }
-//        while (i >= 100);
+//        while (i <= 100);
+
+//        int i = 100;
+//        do {
+//            i -= 5;
+//            System.out.println(i);
+//        }
+//        while (i > -10);
+
+//        int i = 2;
+//        do {
+//            i = i * i;
+//            System.out.println(i);
+//        }
+//        while (i <= 65537);
+
+//        for(var i = 5; i <= 15; i++) {
+//            System.out.println(i);
+//        }
+
+        for
+
 
 
     }
