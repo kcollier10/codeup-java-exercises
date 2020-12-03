@@ -48,21 +48,20 @@ public class ConsoleExercises {
 //
 //        System.out.printf("You entered %d.2f and %d.2f.", width, height);
 //        System.out.printf("The perimeter of the room is: %d.2f", perimeter);
+
         myScanner.useDelimiter("/n");
         System.out.println("We're going to calculate the perimeter of a Codeup Classroom.");
         System.out.println("Below this line, please submit two values: the first for width of the room, and the second for height of the room.");
         String width = myScanner.nextLine();
         String height = myScanner.nextLine();
-        int widthInteger = Integer.parseInt(width);
-        int heightInteger = Integer.parseInt(height);
+        float widthL = Float.parseFloat(width);
+        float heightL = Float.parseFloat(height);
 
-        int perimeter = (2 * widthInteger) + (2 * heightInteger);
+        float perimeter = (2 * widthL) + (2 * heightL);
+        float volume = (widthL * heightL);
 
-        System.out.printf("You entered %.2f and %.2f.", widthInteger, heightInteger);
-        System.out.printf("The perimeter of the room is: %d", perimeter);
-
-
-
+        System.out.printf("You entered %.2f and %.2f.", widthL, heightL);
+        System.out.printf("The perimeter of the room is: %.2f. The volume of the room is %.2f", perimeter, volume);
 
     }
 }
