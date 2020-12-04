@@ -11,3 +11,5 @@ public class WarmUp {
         System.out.printf("You have %d %ss!\n\n", count, veggie);
     }
 }
+
+// change the original .nextLine()
