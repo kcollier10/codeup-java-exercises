@@ -34,10 +34,10 @@ public class MethodsLec {
 //
 //
 //        // ------ OVERLOADING
-//        sayHello();
-//        sayHello(2);
-//        sayHello("John");
-//        sayHello("Salutations", "Kevin");
+//        sayHello(); <-- would expect no parameters
+//        sayHello(2); <-- would expect an integer
+//        sayHello("John"); <-- would expect a string
+//        sayHello("Salutations", "Kevin"); <-- multiple parameters
 //
 //
 //
@@ -79,11 +79,15 @@ public class MethodsLec {
 
     // ----------- OVERLOADING
 
-    //    public static void sayHello(int times) {
-    //        for (int i = 0; i < times; i += 1) {
-    //            sayHello();
-    //        }
-    //    }
+        public static void sayHello() {
+            System.out.println("hello");
+        }
+        
+        public static void sayHello(int times) {
+            for (int i = 0; i < times; i += 1) {
+                sayHello();
+            }
+        }
     //    public static void sayHello() {
     //        sayHello("Hello", "World");
     //    }
