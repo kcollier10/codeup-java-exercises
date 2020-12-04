@@ -1,2 +1,12 @@
 METHODS
 
+What is a Java method?
+Why use additional methods rather than writing all Java code in a main method?
+What does it mean to ‘call’ or ‘invoke’ a method?
+What are six parts of a method definition as explained in the curriculum?
+In what ways do Java methods differ from JS functions?
+What is a method signature?
+What is method overloading?
+Will changing the return type of a method overload it?
+What is recursion and what are the differences/pros/cons compared to iteration?
+What is a StackOverflowError?
