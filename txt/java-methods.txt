@@ -6,6 +6,7 @@ What is a Java method?
 public static returnType methodName([param1[, param2[, ...]]) {
         // a return statement, if a return type is declared
 }
+-"a way to make code more modular"
 
 
 Why use additional methods rather than writing all Java code in a main method?
@@ -48,6 +49,7 @@ What is a method signature?
 
 What is method overloading?
 using same name, but different parameters, for executing different tasks
+Java compiler reads via method signature
 
 
 Will changing the return type of a method overload it?
