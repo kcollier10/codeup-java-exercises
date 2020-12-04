@@ -38,6 +38,7 @@ public class MethodsExercises {
 
     public static int Addition(int x, int y) {
         return x + y;
+
     }
 
     public static int Subtraction(int x, int y) {
@@ -72,6 +73,7 @@ public class MethodsExercises {
             return 1;
 
         return n * factorial(n-1);
+
     }
 
 

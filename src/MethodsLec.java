@@ -16,13 +16,14 @@ public class MethodsLec {
 
      */
 
-    public static void printJupiter(String name) {
-        System.out.println(name);
-    }
-
-    public static void main(String[] args) {
-
-        printJupiter("Luna");
+//    public static void printJupiter(String name) {
+//        System.out.println(name);
+//    }
+//
+//    public static void main(String[] args) {
+//
+//        printJupiter("Luna");
+//    }
 
 
 //        // ------ DEFINING AND CALLING METHODS WITH VARIOUS INPUTS
@@ -47,7 +48,7 @@ public class MethodsLec {
 //        countTo100(1);
 
 
-    }
+
 
     // ----------- DEFINING AND CALLING METHODS WITH VARIOUS INPUTS (examples)
 
@@ -79,15 +80,15 @@ public class MethodsLec {
 
     // ----------- OVERLOADING
 
-        public static void sayHello() {
-            System.out.println("hello");
-        }
-        
-        public static void sayHello(int times) {
-            for (int i = 0; i < times; i += 1) {
-                sayHello();
-            }
-        }
+//        public static void sayHello() {
+//            System.out.println("hello");
+//        }
+//
+//        public static void sayHello(int times) {
+//            for (int i = 0; i < times; i += 1) {
+//                sayHello();
+//            }
+//        }
     //    public static void sayHello() {
     //        sayHello("Hello", "World");
     //    }
@@ -101,8 +102,27 @@ public class MethodsLec {
     //    public static double sayHello(double x) {
     //        return x;
     //    }
+    // ----------- RECURSION - where a method invokes itself
 
-    // ----------- RECURSION
+    public static void soutHello(int num) {
+        if(num > 10) {
+            return;
+        }
+
+        System.out.print("Hello");
+        soutHello(num + 1);
+    }
+
+    public static void helloLoop() {
+        for (long i = 0; i <10; i++) {
+            System.out.println("Hello");
+        }
+    }
+
+    public static void main(String[] args) {
+        soutHello(1);
+        helloLoop();
+    }
 
     //    public static void countTo100Loop(int num) {
     //        for (int i = num; i <= 100; i += 1) {
