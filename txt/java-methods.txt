@@ -1,0 +1,65 @@
+METHODS
+
+What is a Java method?
+-a sequence of statements that perform a specific task
+-analogous to functions in JavaScript
+public static returnType methodName([param1[, param2[, ...]]) {
+        // a return statement, if a return type is declared
+}
+
+
+Why use additional methods rather than writing all Java code in a main method?
+Call on methods at a specific time rather than all at once?
+Readability?
+
+
+What does it mean to ‘call’ or ‘invoke’ a method?
+to reference it in another spot in your code
+
+
+What are six parts of a method definition as explained in the curriculum?
+MODIFIER: Defines access type of the method i.e. from where it can be accessed in your application. In Java, there 4 type of the access specifiers.
+public: accessible in all class in your application.
+protected: accessible within the class in which it is defined and in its subclass(es)
+private: accessible only within the class in which it is defined.
+default (declared/defined without using any modifier) : accessible within same class and package within which its class is defined.
+RETURN TYPE : The data type of the value returned by the method or void if does not return a value.
+METHOD NAME : the rules for field names apply to method names as well, but the convention is a little different.
+PARAMETER LIST : Comma separated list of the input parameters are defined, preceded with their data type, within the enclosed parenthesis. If there are no parameters, you must use empty parentheses ().
+EXCEPTION LIST : The exceptions you expect by the method can throw, you can specify these exception(s).
+METHOD BODY : it is enclosed between braces. The code you need to be executed to perform your intended operation
+
+
+In what ways do Java methods differ from JS functions?
+Java is an Object-Oriented Programming language, and JS *can* be used as one
+In JS, the type of variable is unknown until program compilation
+--In Java, each variable has to be associated with a type upon declaration
+Java allows a class to derive properties from multiples classes (inheritances)
+--JS is based on concept of prototypes and does not support multiple inheritances
+Java supports function overloading (using same name for executing different tasks)
+--JS does not
+JS has multithreading, a feature that reduces execution time by executing more than one part of the program concurrently (utilizing CPU power)
+--JS does not because the interpreter inside the browser is single-threaded
+
+
+What is a method signature?
+"It's the combination of the method name and the parameter list. The reason for the emphasis on just the method name and parameter list is because of overloading. It's the ability to write methods that have the same name but accept different parameters."
+
+
+What is method overloading?
+using same name, but different parameters, for executing different tasks
+
+
+Will changing the return type of a method overload it?
+No, The rationale is that the return value alone is not sufficient for the compiler to figure out which function to call
+
+
+What is recursion and what are the differences/pros/cons compared to iteration?
+When an entity calls itself
+The concept of Recursion and Iteration is to execute a set of instructions repeatedly. The difference between them is that recursion is simply a method call in which the method being called is the same as the one making the call while iteration is when a loop is repeatedly executed until a certain condition is met.
+The iteration is when a loop repeatedly executes until the controlling condition becomes false.
+Recursion and iteration are equally expressive: recursion can be replaced by iteration with an explicit call stack, while iteration can be replaced with tail recursion.
+
+What is a StackOverflowError?
+A StackOverflowError is a runtime error in java. It is thrown when the amount of call stack memory allocated by JVM is exceeded. A common case of a StackOverflowError being thrown, is when call stack exceeds due to excessive deep or infinite recursion.
+The simplest solution is to carefully inspect the stack trace and detect the repeating pattern of line numbers. These line numbers indicate the code being recursively called. Once you detect these lines, you must carefully inspect your code and understand why the recursion never terminates.
