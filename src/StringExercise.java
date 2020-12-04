@@ -13,8 +13,8 @@ public class StringExercise {
         String windows = ("In windows, the main drive is usually C:\\");
         System.out.println(windows);
 
-
-
+        String slashes = ("I can do backlashes \\, double backslashes \\\\,\nand the amazing triple backslash \\\\\\!");
+        System.out.println(slashes);
 
     }
 }
