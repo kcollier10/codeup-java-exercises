@@ -98,7 +98,7 @@ public class ControlFlowExercises {
         } while (userContinues);
 
 
-       do {
+//       do {
            System.out.println("Enter an integer (whole number without digits):");
            int grade = myScanner.nextInt();
            if (grade <= 59) {
@@ -133,11 +133,12 @@ public class ControlFlowExercises {
                    System.out.println("Current grade is a : A");
            }
 
+
 //        System.out.print("Continue? (y/n): ");
 //        userChoice = myScanner.next();
 //        System.out.println();
 //    } while (!userChoice.equalsIgnoreCase("n"));
-
+//
     }
 
 
