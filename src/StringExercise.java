@@ -10,6 +10,11 @@ public class StringExercise {
         String checkThisOut = ("Check \"this\" out!, \"s inside of \"s!");
         System.out.println(checkThisOut);
 
+        String windows = ("In windows, the main drive is usually C:\\");
+        System.out.println(windows);
+
+
+
 
     }
 }
