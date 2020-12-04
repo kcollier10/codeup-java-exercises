@@ -97,23 +97,23 @@ public class Bob {
 
         sentence = sentence.toLowerCase();
 
-        int vCount = 0;
-        int cCount = 0;
+        int vowels = 0;
+        int consonants = 0;
 
         for (int i = 0; i < sentence.length(); i++)
         {
             if (sentence.charAt(i) == 'a' || sentence.charAt(i) == 'e' || sentence.charAt(i) == 'i'
                     || sentence.charAt(i) == 'o' || sentence.charAt(i) == 'u') {
-                vCount++;
+                vowels++;
             }
             else if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z')
             {
-                cCount++;
+                consonants++;
             }
         }
 
-        System.out.printf("Number of vowels: %d", vCount);
-        System.out.printf("Number of consonants: %d", cCount);
+        System.out.printf("Number of vowels: %d", vowels);
+        System.out.printf("Number of consonants: %d", consonants);
 
     }
 

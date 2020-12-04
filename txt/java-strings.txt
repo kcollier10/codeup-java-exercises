@@ -1,0 +1,10 @@
+Strings
+
+Strings are not a primitive type, they are a reference type
+Strings are immutable in Java; string manipulations will not alter original
+String values should not be compared using ‘==‘
+Instead, use .equals()
+
+Cannot chain methods on to a boolean
+Equals will give a boolean
+startsWith will give a boolean
