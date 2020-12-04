@@ -28,7 +28,7 @@ public class Bob {
 //            userInput = myScanner.nextLine();
 //        }
 
-        System.out.println("Please enter date in MM/DD/YYYY");
+        System.out.println("Please enter date in MM/DD/YYYY format.");
         String Date = myScanner.nextLine();
         String Month = Date.substring(0,2);
         String Day = Date.substring(3,5);
@@ -91,6 +91,34 @@ public class Bob {
         }
 
 
+
+        System.out.println("Please enter a sentence below:");
+        String sentence = myScanner.nextLine();
+
+        sentence = sentence.toLowerCase();
+
+        int vCount = 0;
+        int cCount = 0;
+
+        for (int i = 0; i < sentence.length(); i++)
+        {
+            if (sentence.charAt(i) == 'a' || sentence.charAt(i) == 'e' || sentence.charAt(i) == 'i'
+                    || sentence.charAt(i) == 'o' || sentence.charAt(i) == 'u') {
+                vCount++;
+            }
+            else if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z')
+            {
+                cCount++;
+            }
+        }
+
+        System.out.printf("Number of vowels: %d", vCount);
+        System.out.printf("Number of consonants: %d", cCount);
+
     }
+
+
+
+
 
 }
