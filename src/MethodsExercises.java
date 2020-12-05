@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-    Scanner myScanner;
 
     public static void main (String[] arg) {
 
@@ -27,11 +26,19 @@ public class MethodsExercises {
         userInput = myScanner.nextInt();
         getInteger(1, 10, userInput);
 
+        System.out.println("Please enter a number for factorialization:");
+        long num = myScanner.nextInt();
+        System.out.println("Factorial of " + num + " is " + factorial(5));
 
     }
 
+
+
+
+
     public static int Addition(int x, int y) {
         return x + y;
+
     }
 
     public static int Subtraction(int x, int y) {
@@ -60,6 +67,13 @@ public class MethodsExercises {
         } else {
             System.out.println("Please enter a different number.");
         }
+    }
+    public static long factorial(long n) {
+        if (n == 0)
+            return 1;
+
+        return n * factorial(n-1);
+
     }
 
 
