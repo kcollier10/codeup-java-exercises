@@ -29,7 +29,8 @@ public class MethodsExercises {
 
         System.out.println("Please enter a number for factorialization:");
         long num = myScanner.nextInt();
-        System.out.println("Factorial of " + num + " is " + factorial(5));
+        System.out.println("Factorial of " + num + " is " + factorial(num));
+        Dice();
     }
 
 
@@ -66,32 +67,45 @@ public class MethodsExercises {
         }
     }
     public static long factorial(long n) {
-        if (n == 1L)
+        long result;
+        if (n == 1)
             return 1;
 
-        return n * factorial(n-1);
+        result = factorial(n - 1) * n;
+        return result;
 
     }
 
-    public static  String loopFactorial(long n) {
-        int initial = 1;
-        for (int i = 1; i < n; i++) {
-            initial *= i;
-        }
-        return n + "!" + " = " + initial;
+//    public static  String loopFactorial(long n) {
+//        int initial = 1;
+//        for (int i = 1; i < n; i++) {
+//            initial *= i;
+//        }
+//        return n + "!" + " = " + initial;
+//
+//    }
 
-    }
+    public static void Dice () {
+        Scanner myScanner = new Scanner(System.in);
+        boolean playGame = true;
 
-    public static int Dice () {
+        do {
+            System.out.println("Enter the number of sides for a pair of dice:");
+            int sides = myScanner.nextInt();
 
-        System.out.println("Would you like to roll the dice?");
+            int die1 = (int) (Math.random() * sides) + 1;
+            int die2 = (int) (Math.random() * sides) + 1;
+            int sum = die1 + die2;
 
+            System.out.printf("You rolled a %d and %d! Your total is: %d \n", die1, die2, sum);
+            System.out.println("Would you like to roll again? [yes] or [no]");
+            String keepGoing = myScanner.next();
 
-        int die1 = (int) (Math.random() * 6 + 1);
-        int die2 = (int) (Math.random() * 6 + 1);
-        int sum = die1 + die2;
-        return sum;
-
+            if (!keepGoing.equalsIgnoreCase("yes")) {
+                playGame = false;
+                System.out.println("Exiting game.");
+            }
+        }while(playGame);
 
     }
 
