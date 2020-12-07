@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MethodsExercises {
 
@@ -29,11 +30,7 @@ public class MethodsExercises {
         System.out.println("Please enter a number for factorialization:");
         long num = myScanner.nextInt();
         System.out.println("Factorial of " + num + " is " + factorial(5));
-
     }
-
-
-
 
 
     public static int Addition(int x, int y) {
@@ -69,10 +66,32 @@ public class MethodsExercises {
         }
     }
     public static long factorial(long n) {
-        if (n == 0)
+        if (n == 1L)
             return 1;
 
         return n * factorial(n-1);
+
+    }
+
+    public static  String loopFactorial(long n) {
+        int initial = 1;
+        for (int i = 1; i < n; i++) {
+            initial *= i;
+        }
+        return n + "!" + " = " + initial;
+
+    }
+
+    public static int Dice () {
+
+        System.out.println("Would you like to roll the dice?");
+
+
+        int die1 = (int) (Math.random() * 6 + 1);
+        int die2 = (int) (Math.random() * 6 + 1);
+        int sum = die1 + die2;
+        return sum;
+
 
     }
 
