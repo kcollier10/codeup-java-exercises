@@ -6,6 +6,7 @@ public class CircleApp {
     public static void main(String[] args) {
 
         Circle userInput = new Circle();
+        Circle circle = new Circle(5);
         double radius = userInput.getRadius();
         double area = userInput.getArea();
         double circumference = userInput.getCircumference();
