@@ -4,10 +4,10 @@ public class oopIntroLec {
 
         // ======================== slide 3 (classes and objects)
 //
-            Person rick = new Person();
-            rick.firstName = "Rick";
-            rick.lastName = "Sanchez";
-            System.out.println(rick.firstName);
+//            Person rick = new Person();
+//            rick.firstName = "Rick";
+//            rick.lastName = "Sanchez";
+//            System.out.println(rick.firstName);
 
             // doing p1 == p2 will check ids, not contents
             // accessing a variable that hasn't been defined will return a null
@@ -26,7 +26,8 @@ public class oopIntroLec {
         // -- Dog Example --
 
 
-//            Dog d1 = new Dog();
+
+
 //
 //            d1.age = 3;
 //            d1.breed = "corgi";
@@ -61,6 +62,15 @@ public class oopIntroLec {
 //            System.out.println(Arithmetic.multiply(5, 5));
 
         // -- DogHelper Example --
+
+        Dog dog = new Dog();
+        dog.name = "Sparky";
+        dog.age = 3;
+        dog.callForDog("Sparky");
+
+        System.out.println(DogHelper.NUMBER_OF_DOG_BREEDS);
+
+        System.out.println(DogHelper.humanToDogYears(dog.age));
 
 
 

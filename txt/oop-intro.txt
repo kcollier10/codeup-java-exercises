@@ -30,9 +30,15 @@ Static - contrary to the dictionary definition of unchanging, static means that 
 
 ================================= OOP LECTURE PART 1 QUESTIONS
 What are packages in Java?
+
+
 What is the difference between a class and an object?
 What is instantiation and what syntax is needed to do it?
 How are instance variables with public visibility accessed and changed?
 What are instance variables?
 What is displayed when printing out an object?
 What are instance methods?
+
+** static methods are run right when you compile, creating a new class wouldn't happen until you reach the 'new' keyword
+** object example: scanner
+** static methods/properties: Math class has different methods (i.e. Math.random())
