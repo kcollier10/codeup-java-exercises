@@ -17,9 +17,27 @@ public class Input {
         System.out.println("Please enter a string:");
         return this.myScanner.nextLine();
     }
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
+    }
+
+//    public boolean yesNo() {
+//        System.out.println("Please enter yes or no:");
+//        String userInput = myScanner.next();
+//        return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("sure");
+//    }
+    // or
 
     public boolean yesNo() {
-        System.out.println("Please enter yes or no:");
+        return yesNo("Please enter yes or no:");
+//        String userInput = myScanner.next();
+//        return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("sure");
+    }
+
+
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
         String userInput = myScanner.next();
         return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("sure");
     }
@@ -36,14 +54,15 @@ public class Input {
 //        return userInput;
 //    }
 
-    public int getInt(int max, int min) {
-        int input;
-        do{
-            System.out.printf("Please enter an int between %d and %d.", min, max);
-            input = this.myScanner.nextInt();
-        }while(input < min || input > max);
-
-        return input;
+    public int getInt(int min, int max, String prompt) {
+        return getInt(min, max, "Please enter an int between" + min + " and " + max);
+//        int input;
+//        do{
+//            System.out.printf("Please enter an int between %d and %d.", min, max);
+//            input = this.myScanner.nextInt();
+//        }while(input < min || input > max);
+//
+//        return input;
     }
 
     public int getInt () {
@@ -61,7 +80,7 @@ public class Input {
 //            return getDouble(min, max);
 //        }
 //    }
-    public double getDouble(double max, double min) {
+    public double getDouble(double min, double max) {
         double input;
         do{
             System.out.printf("Please enter an int between %f and %f.", min, max);
