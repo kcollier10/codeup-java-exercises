@@ -1,0 +1,13 @@
+Inhertiance is the process of one Java class acquiring the methods of another
+
+Vehicles
+ -Automobiles
+    -Car
+    -Bus
+ -Pulled Vehicles
+    -Cart
+    -Wagon
+
+Inheritance is a one-way street
+Children have properties of parent, but not other way around
+Arrows pointing up instead of down because Child extends Parent

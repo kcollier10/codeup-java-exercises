@@ -23,15 +23,8 @@ public class ArraysExercises {
     }
 
     public static void addPerson(String[] Beatles, String addMember){
-//        int i = Beatles.length;
-//        int n = ++i;
-//        String[] newBeatles = new String[n];
-//        for(int count = 0; count < Beatles.length; count++){
-//            newBeatles[count] = Beatles[count];
-//        }
-//        return newBeatles;
 //        System.out.println("Please enter your name to add it to the Beatles line-up:");
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
 //        addMember = sc.next();
         String[] newBeatles = Arrays.copyOf(Beatles, 4);
         newBeatles[3] = addMember;
@@ -41,3 +34,10 @@ public class ArraysExercises {
         }
     }
 }
+//        int i = Beatles.length;
+//        int n = ++i;
+//        String[] newBeatles = new String[n];
+//        for(int count = 0; count < Beatles.length; count++){
+//            newBeatles[count] = Beatles[count];
+//        }
+//        return newBeatles;
