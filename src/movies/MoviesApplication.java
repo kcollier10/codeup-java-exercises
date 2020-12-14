@@ -11,7 +11,7 @@ public class MoviesApplication {
 
         // generates all movies
         Movie[] movieList = MoviesArray.findAll();
-        int userChoices = userConfirmation(scanner);
+//        int userChoices = userConfirmation(scanner);
 
         System.out.println("*****************************************");
         System.out.println("What would you like to do?");
@@ -27,24 +27,26 @@ public class MoviesApplication {
 
         // switch statement for choosing?
 
-        switch (userChoices) {
-            case 0:
-                System.out.println("Goodbye!");
-                System.exit(0);
-                break;
-            case 1:
-                System.out.println("Displaying all movies:");
-                System.out.println("----------------------");
-                showMovieList("all", movieList);
-                System.out.println("----------------------");
-                break;
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-        }
+//        switch (userChoices) {
+//            case 0:
+//                System.out.println("Goodbye!");
+//                System.exit(0);
+//                break;
+//            case 1:
+//                System.out.println("Displaying all movies:");
+//                System.out.println("----------------------");
+//                showMovieList("all", movieList);
+//                System.out.println("----------------------");
+//                break;
+//            case 2:
+//            case 3:
+//            case 4:
+//            case 5:
+//            case 6:
+//            case 7:
+//        }
+
+        //NEED TO GO BACK AND FIND OVERWRITTEN FILE
 
     }
 
