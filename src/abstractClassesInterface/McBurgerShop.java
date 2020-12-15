@@ -24,6 +24,8 @@ public class McBurgerShop implements McFranchise {
         theseCategories.add("Desserts");
         McBurgerShop mcDonaldsDallas = new McBurgerShop(theseMenuItems, theseCategories, 200, 800, 2300, true);
 
+        Franchise.broilStuff("Big Mac", 43);
+
         // Loop through all of the menu items and print each one of them to the screen
         for (String thisItem : mcDonaldsDallas.getMenuItems()) {
             // running broilStuff() method on

@@ -21,6 +21,10 @@ public abstract class Franchise {
 
     // Methods
     public abstract void broilStuff (String menuItem); // broilStuff("bigMac");
+
+    public static void broilStuff(String menuItem, int randNumber) {
+        System.out.println("Statically broiling some " + menuItem);
+    }
     // 8am = 800, 10pm = 2200
     public abstract void businessHours(int openTime, int closeTime);
 
