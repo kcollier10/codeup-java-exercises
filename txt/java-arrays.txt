@@ -1,0 +1,40 @@
+ARRAYS
+
+Primitive data type: not objects, actual values
+Reference data type: the map to get to the value
+
+Arrays are a reference type
+Ultimately still a list
+
+Arrays can contain both primitive and reference type values, just not at the same time
+
+Arrays have a fixed length that must be defined
+-Data type must also be declared
+-are considered an object
+-hold 0 or more objects
+-[ ] can be read as ‘an array of’
+
+SETTING LENGTH:
+double[] prices;
+Prices = new double[4];
+Will make enough space to have a maximum of 4
+Or
+Double prices = new double[4];
+
+Final int NUMBER_OF_BEATLES = 4;
+BandMember[] theBeatles = new BandMember[NUMBER_OF_BEATLES];
+
+ELEMENTS:
+
+0 indexed
+Elements that have not been initialized will be that type’s default
+Will get an ArrayIndexOutOfBounds error if you refer to an index that is bigger than the length of the array
+
+DEFAULT VALUES:
+Integer number types: 0
+Decimal number types: 0.0
+Boolean: false
+Character: \0 (zero)
+Object: null
+
+Null Pointer Exception = trying to find something that doesn’t exist

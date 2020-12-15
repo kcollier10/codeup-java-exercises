@@ -1,0 +1,30 @@
+Dallas notes
+
+WATERFALL VS AGILE:
+
+Waterfall - start out and outline everything your going to do, then design it all, then implement, then test, then deliver/maintenance
+
+Agile- continuous/scheduled delivery
+
+Scrum are rules to go by to make you sure you adhere to Agile; use Scrum framework
+
+Gherkins - Acceptance criterion language; used with Cucumber
+
+**Do the SCRUM training series*
+
+Octopus Deploy - used for DevOps CD (continuous deployment)
+
+TeamCity used for CI (continuous integration)
+
+**Scott Hanselman on YouTube**
+
+NoSQL = ‘not only SQL’
+
+KUBERNETES
+Node is a worker
+Pod is a group of containers (might include ip, storage, other info)
+Container is the unit of work (the doer)
+One pod could be storage, one could be the shopping cart, one could be for memory
+
+-allows you to set constraints for cpu and memory usage
+
