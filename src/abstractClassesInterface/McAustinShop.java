@@ -25,12 +25,12 @@ public class McAustinShop implements McFranchise {
 
     @Override
     public void broilStuff(String menuItem) {
-        System.out.printf("The hipster kitchen just whipped up a: %s", menuItem);
+        System.out.printf("The hipster kitchen just whipped up a: %s\n", menuItem);
     }
 
     @Override
     public void businessHours(int openTime, int closeTime) {
-        System.out.printf("Our store is open from %d to %d.", openTime, closeTime);
+        System.out.printf("Our store is open from %d to %d.\n", openTime, closeTime);
     }
 
     @Override

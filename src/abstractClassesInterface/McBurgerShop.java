@@ -31,6 +31,13 @@ public class McBurgerShop implements McFranchise {
             // Looking at one menu item at a time
 //            System.out.printf("Menu item: %s\n", thisItem);
         }
+
+    // Create instance of McAustinShop that implements methods SLIGHTLY different than McBurgerShop
+    McAustinShop austinMcDonalds = new McAustinShop(theseMenuItems, theseCategories, 400, 700, 2100, false);
+        for(String thisItem: austinMcDonalds.getMenuItems()) {
+            austinMcDonalds.broilStuff(thisItem);
+        }
+
     }
 
     // Constructor
@@ -47,12 +54,12 @@ public class McBurgerShop implements McFranchise {
     // Overrides
     @Override
     public void broilStuff(String menuItem) {
-        System.out.printf("The kitchen just cooked an order of: %s", menuItem);
+        System.out.printf("The kitchen just cooked an order of: %s\n", menuItem);
     }
 
     @Override
     public void businessHours(int openTime, int closeTime) {
-        System.out.printf("Hours are between %d and %d", openTime, closeTime);
+        System.out.printf("Hours are between %d and %d\n", openTime, closeTime);
 
     }
 
