@@ -3,12 +3,8 @@ package abstractClassesInterface;
 import java.util.ArrayList;
 import java.util.List;
 
-// Burger Shop will be the "San Antonio" installation of a franchise
-public class BurgerShop extends Franchise {
-    // This will be an ACTUAL McDonald's store
-    // It has to follow all the 'rules' set in the "Franchise" abstract class
+public class McBurgerShop implements McFranchise {
 
-    // properties (can have as many custom as we want)
     private List<String> menuItems;
     private List<String> menuCategories;
     private int seatingCapacity;
@@ -16,12 +12,29 @@ public class BurgerShop extends Franchise {
     private int closeTime;
     private boolean isWorking;
 
+    public static void main(String[] args) {
+        // Let's try to access some of McBurgerShop's items/methods
+        List<String> theseMenuItems = new ArrayList<>();
+        theseMenuItems.add("Big Mac");
+        theseMenuItems.add("French Fries");
+        theseMenuItems.add("Quarter Pounder");
+        List <String> theseCategories = new ArrayList<>();
+        theseCategories.add("Entrees");
+        theseCategories.add("Sides");
+        theseCategories.add("Desserts");
+        McBurgerShop mcDonaldsDallas = new McBurgerShop(theseMenuItems, theseCategories, 200, 800, 2300, true);
 
-    // We'll need: constructor, override methods, getters and setters
+        // Loop through all of the menu items and print each one of them to the screen
+        for (String thisItem : mcDonaldsDallas.getMenuItems()) {
+            // running broilStuff() method on
+            mcDonaldsDallas.broilStuff(thisItem);
+            // Looking at one menu item at a time
+//            System.out.printf("Menu item: %s\n", thisItem);
+        }
+    }
 
     // Constructor
-    public BurgerShop(String managerName, List<String> menuItems, List<String> menuCategories, int seatingCapacity, int openTime, int closeTime, boolean isWorking) {
-        super(managerName);
+    public McBurgerShop (List <String> menuItems, List <String> menuCategories, int seatingCapacity, int openTime, int closeTime, boolean isWorking) {
         this.menuItems = menuItems;
         this.menuCategories = menuCategories;
         this.seatingCapacity = seatingCapacity;
@@ -30,11 +43,11 @@ public class BurgerShop extends Franchise {
         this.isWorking = isWorking;
     }
 
-    //Override the methods that have to be written, per the 'Franchise' abstract class
-    // Use Override keyword to help yourself down the code
+
+    // Overrides
     @Override
     public void broilStuff(String menuItem) {
-        System.out.printf("Items are being cooked: %s", menuItem);
+        System.out.printf("The kitchen just cooked an order of: %s", menuItem);
     }
 
     @Override
@@ -44,28 +57,14 @@ public class BurgerShop extends Franchise {
     }
 
     @Override
-    public boolean iceCreamMachineWorking() {
-        System.out.println("Lol of course the ice cream machine isn't working.");
-        // this *could* just be replaced by a getter, but to make it more complex, we could also check if the store is open and THEN return true
-        if (this.openTime > 100) {
-            return this.isWorking;
+    public String iceCreamMachineWorking() {
+        if (this.isWorking) {
+            return "Time for ice cream!";
+        } else {
+            return "No ice cream for you!";
         }
-        return false;
     }
 
-
-    public static void main(String[] args) {
-        List<String> theseMenuItems = new ArrayList<>();
-        theseMenuItems.add("Big Mac");
-        theseMenuItems.add("French Fries");
-        List <String> theseCategories = new ArrayList<>();
-        theseCategories.add("Entrees");
-        theseCategories.add("Sides");
-        BurgerShop mcDonaldsSanAntonio = new BurgerShop("Casey Friday", theseMenuItems, theseCategories, 200, 800, 2200, true);
-        mcDonaldsSanAntonio.setManagerName("Vivian Canales");
-    }
-
-    // Getters and setters
     public List<String> getMenuItems() {
         return menuItems;
     }

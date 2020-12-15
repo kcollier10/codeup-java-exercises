@@ -1,0 +1,9 @@
+Interface Notes
+
+- good for providing common functionality to unrelated classes
+- good when we want to implemnt multiple interfaces
+- if we're designing small, concise bits of functionality, use interfaces
+- if we're designing large functionality, use an abstract class
+- contains:
+    - abstract methods
+    - static constants
