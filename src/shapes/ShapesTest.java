@@ -24,6 +24,12 @@ public class ShapesTest {
         Measurable square = new Square(5);
         Measurable rectangle = new Rectangle(5, 6);
 
+        System.out.println(square.getArea());
+        System.out.println(square.getPerimeter());
+
+        System.out.println(rectangle.getArea());
+        System.out.println(rectangle.getPerimeter());
+
         // Why does code fail to compile if you leave off the getPerimeter method in Rectangle?
         // Rectangle is not abstract and does not override abstract method getPerimeter() in shapes.Measurable
 
