@@ -19,8 +19,17 @@ public class ShapesTest {
 //        Measurable myShape = new Square();
 //        Measurable myShape = new Rectangle();
         // cannot do this, need a parameter
-//        Measurable myShape = new Square(5);
-        Measurable myShape = new Rectangle(5, 6);
+
+
+        Measurable square = new Square(5);
+        Measurable rectangle = new Rectangle(5, 6);
+
+        // Why does code fail to compile if you leave off the getPerimeter method in Rectangle?
+        // Rectangle is not abstract and does not override abstract method getPerimeter() in shapes.Measurable
+
+//        square.getLength();
+//        square.getWidth();
+        // cannot do this because there is no getLength() method in Measurable
     }
 
 }
