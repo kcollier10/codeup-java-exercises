@@ -18,4 +18,17 @@ public class Square extends Quadrilateral {
         System.out.println("Perimeter of a square:");
         return length * 4;
     }
+
+    @Override
+    public void setLength(double length) {
+        this.length = length;
+        this.width = length;
+    }
+
+    @Override
+    public void setWidth(double width) {
+        this.length = width;
+        this.width = length;
+
+    }
 }
