@@ -30,6 +30,7 @@ public class BurgerShop extends Franchise {
     }
 
     //Override the methods that have to be written, per the 'Franchise' abstract class
+    // Use Override keyword to help yourself down the code
     @Override
     public void broilStuff(String menuItem) {
         System.out.printf("Items are being cooked: %s", menuItem);
@@ -51,10 +52,52 @@ public class BurgerShop extends Franchise {
         return false;
     }
 
-    public static void main(String[] args) {
-        BurgerShop myShop = new BurgerShop();
+    // Getters and setters
+    public List<String> getMenuItems() {
+        return menuItems;
     }
 
-    // Getters and setters
+    public void setMenuItems(List<String> menuItems) {
+        this.menuItems = menuItems;
+    }
 
+    public List<String> getMenuCategories() {
+        return menuCategories;
+    }
+
+    public void setMenuCategories(List<String> menuCategories) {
+        this.menuCategories = menuCategories;
+    }
+
+    public int getSeatingCapacity() {
+        return seatingCapacity;
+    }
+
+    public void setSeatingCapacity(int seatingCapacity) {
+        this.seatingCapacity = seatingCapacity;
+    }
+
+    public int getOpenTime() {
+        return openTime;
+    }
+
+    public void setOpenTime(int openTime) {
+        this.openTime = openTime;
+    }
+
+    public int getCloseTime() {
+        return closeTime;
+    }
+
+    public void setCloseTime(int closeTime) {
+        this.closeTime = closeTime;
+    }
+
+    public boolean isWorking() {
+        return isWorking;
+    }
+
+    public void setWorking(boolean working) {
+        isWorking = working;
+    }
 }
