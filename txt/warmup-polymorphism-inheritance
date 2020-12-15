@@ -1,0 +1,64 @@
+# Inheritance and Polymorphism Warmup
+
+### Captain America
+- What are the 4 pillars of OOP?
+    - Encapsulation: each object maintains private state inside a class; grouping of information
+    - Abstraction: extension of encapsulation; hiding of information
+    - Inheritance: sharing of information
+    - Polymorphism: redefining of information
+- Define Inheritance in Java
+    -takes behavior from parent object
+- What is the 'final' keyword?
+    - const
+
+### Iron Man
+- What are the benefits of an Object Oriented programming language?
+    -reusability of the code, if you want similar functionality you can have just one class inherit, security (private/public/protected), design benefits of having already-planned code
+- What is a superclass? A subclass?
+    - superclass: parent
+    - subclass can INHERIT the properties/methods of superclass
+
+### The Hulk
+- What is the difference between a Class and an Object?
+    - class: blueprint from which you can create an instance
+    - object: the instance of the class; what we instantiate
+- Does a subclass have access to a superclass method? What about the other way around?
+    -
+
+
+### Black Widow
+- What is the difference between a Static and an Instance variable?
+    -instance variable only accessed from instance of that class
+- How does a subclass override a superclass method?
+    -
+- How can a subclass use the superclass implementation of a method after it has been overridden?
+    -using the super keyword followed by whatever property or method name to refer back to superclass
+
+
+### Hawkeye
+- What is a Constructor?
+    -A constructor initializes an object when it is created. It has the same name as its class and is syntactically similar to a method. However, constructors have no explicit return type.
+    -Typically, you will use a constructor to give initial values to the instance variables defined by the class, or to perform any other start-up procedures required to create a fully formed object.
+    -can be overloaded
+    -All classes have constructors, whether you define one or not, because Java automatically provides a default constructor that initializes all member variables to zero. However, once you define your own constructor, the default constructor is no longer used.
+- Define Polymorphism in Java
+    -
+    -
+- What is meant by Class visibility?
+
+
+Within the next 30 minutes take time with your group to review these questions and be prepared to talk through the answers.
+
+Only one member needs to present to the class.
+
+Other members may assist in answering questions from the class.
+
+
+
+
+
+
+
+
+
+
