@@ -16,12 +16,14 @@ public class Rectangle extends Quadrilateral implements Measurable {
     }
 
 
+
+
 //    protected double length;
 //    protected double width;
 //
-//    public Rectangle (double length, double width){
-//        this.length = length;
-//        this.width = width;
+//    public Rectangle (double L, double W){
+//        this.length = L;
+//        this.width = W;
 //    }
 //
 //    public double getArea () {
