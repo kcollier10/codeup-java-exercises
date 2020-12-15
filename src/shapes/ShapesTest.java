@@ -14,8 +14,13 @@ public class ShapesTest {
 //        System.out.println(box2.getPerimeter());
 
         // use Measurable class instead of Rectangle and Square first
-
-
+//        Measurable myShape = new Measurable();
+        // cannot do this, Measurable is abstract and cannot be instantiated
+//        Measurable myShape = new Square();
+//        Measurable myShape = new Rectangle();
+        // cannot do this, need a parameter
+//        Measurable myShape = new Square(5);
+        Measurable myShape = new Rectangle(5, 6);
     }
 
 }
