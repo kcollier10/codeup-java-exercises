@@ -12,8 +12,6 @@ public class McAustinShop implements McFranchise {
     private boolean isWorking;
 
     // Constructor
-
-
     public McAustinShop(List<String> menuItems, List<String> menuCategories, int seatingCapacity, int openTime, int closeTime, boolean isWorking) {
         this.menuItems = menuItems;
         this.menuCategories = menuCategories;
@@ -21,6 +19,9 @@ public class McAustinShop implements McFranchise {
         this.openTime = openTime;
         this.closeTime = closeTime;
         this.isWorking = isWorking;
+        // or
+        // super(menuItems, menuCategories, seatingCapacity, openTime, closeTime, isWorking);
+        // with this file extending to McBurgerShop
     }
 
     @Override
