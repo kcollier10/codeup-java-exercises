@@ -1,0 +1,16 @@
+Abstract classes have no body:
+
+abstract class Employee {
+    public abstract String work();
+}
+
+class Accountant extends Employee {
+    public String work() {
+        return 'crunching numbers';
+    }
+}
+
+Can serve as a superclass, but cannot be directly instantiated
+Abstract classes can define abstract methods, only providing info on name, return type, and parameters
+
+McDonalds is overarching item, locations would be differnt classes
