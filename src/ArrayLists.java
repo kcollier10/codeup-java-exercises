@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class ArrayLists {
     public static void main(String[] args) {
@@ -51,20 +52,35 @@ public class ArrayLists {
 
         // .contains returns a boolean value based on whether or not a searched value exists in the ArrayList
         System.out.println(roasts.contains("dark"));
+
         // TODO: Check if the roasts list contains "espresso"
         System.out.println(roasts.contains("espresso"));
 
         // returns the last occurrence of a given value
         // TODO: Find the last "medium" roast in the list.
-//        for (String roast : roasts) {
-//
-//        }
+        System.out.println("Last medium roast:");
+        System.out.println(roasts.lastIndexOf("medium"));
 
 
         // TODO: How could we check if the roasts list is empty?
+        System.out.println(roasts.isEmpty());
+        // if empty, will return true
+        // if not empty, will return false
+
         // TODO: Remove one medium roast from the list. If there are duplicate strings in the list, which one is removed first?
+        System.out.println(roasts.remove("medium"));
+//        System.out.println(roasts);
+        // if duplicate strings, the first is removed
+        // return is boolean true or false
+
         // TODO: Remove the element at index 4. Note the return value here vs. the previous remove method.
+        System.out.println(roasts.remove(4));
+        // return type is the actual item removed
+        System.out.println(roasts);
+
         // BONUS TODO: How can we get the list of roasts in alphabetical order?
+        Collections.sort(roasts);
+        System.out.println(roasts);
 
     }
 }
