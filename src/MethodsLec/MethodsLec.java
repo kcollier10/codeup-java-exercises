@@ -1,3 +1,5 @@
+package MethodsLec;
+
 public class MethodsLec {
 
     /*

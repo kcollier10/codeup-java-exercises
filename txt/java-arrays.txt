@@ -38,3 +38,6 @@ Character: \0 (zero)
 Object: null
 
 Null Pointer Exception = trying to find something that doesn’t exist
+
+**USE FOR FINALS/CONSTS**
+**number of tires on a car**

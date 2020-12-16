@@ -1,3 +1,5 @@
+package MethodsLec;
+
 import java.util.Scanner;
 
 public class MethodsPresentation {
