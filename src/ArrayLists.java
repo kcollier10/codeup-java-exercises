@@ -15,11 +15,15 @@ public class ArrayLists {
 
 
 
+
         // Add elements to an ArrayList. The element type is the determined by the Object type within the angle brackets <>
         numbers.add(10);
         numbers.add(12);
         numbers.add(13);
         // .add doesn't return anything
+
+//        numbers.remove(Integer.valueOf(12));
+        // used to remove certain value
 
         // prints out ArrayList
         System.out.println(numbers);
