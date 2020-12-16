@@ -7,6 +7,6 @@ public class Penguin extends Bird {
     }
 
     public void fly() {
-
+        System.out.println("I can't fly :(");
     }
 }
