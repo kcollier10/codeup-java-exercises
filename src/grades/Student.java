@@ -22,7 +22,6 @@ public class Student {
     }
 
     public double getGradeAverage() {
-        System.out.println("Student's grade average is: ");
         double sum = 0;
         if(!grades.isEmpty()) {
             for (Integer grade : grades) {
