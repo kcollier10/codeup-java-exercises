@@ -85,6 +85,8 @@ public class ArrayLists {
         // BONUS TODO: How can we get the list of roasts in alphabetical order?
         Collections.sort(roasts);
         System.out.println(roasts);
+        // or
+        roasts.sort(String::compareTo);
 
     }
 }
