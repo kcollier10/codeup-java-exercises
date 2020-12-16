@@ -18,6 +18,7 @@ public class ArrayLists {
         numbers.add(10);
         numbers.add(12);
         numbers.add(13);
+        // .add doesn't return anything
 
         // prints out ArrayList
         System.out.println(numbers);
@@ -33,6 +34,9 @@ public class ArrayLists {
         System.out.println(numbers.indexOf(20));
 
         // TODO: Add a new Integer to the numbers ArrayList at index 1.
+
+        numbers.add(1, 800);
+        System.out.println(numbers.get(1));
 
         ArrayList<String> roasts = new ArrayList<>();
         roasts.add("light");
@@ -52,6 +56,9 @@ public class ArrayLists {
 
         // returns the last occurrence of a given value
         // TODO: Find the last "medium" roast in the list.
+//        for (String roast : roasts) {
+//
+//        }
 
 
         // TODO: How could we check if the roasts list is empty?
