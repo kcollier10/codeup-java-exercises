@@ -1,6 +1,6 @@
 package OOPZoo;
 
-public class Animal {
+public abstract class Animal {
 
     public Animal(int age, String gender, int weightInLbs) {
         this.age = age;
@@ -19,5 +19,7 @@ public class Animal {
     public void sleep() {
         System.out.println("Sleeping...");
     }
+
+    public abstract void move();
 
 }
