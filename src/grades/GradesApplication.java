@@ -1,5 +1,7 @@
 package grades;
 
+import util.Input;
+
 import java.util.HashMap;
 
 public class GradesApplication {
@@ -35,6 +37,19 @@ public class GradesApplication {
         s4.addGrade(93);
         s4.addGrade(94);
         students.put("bobert", s4);
+
+        System.out.println("Welcome to GRADient");
+        Input userInput = new Input();
+        boolean accessGrades;
+
+        do {
+            for(String username:students.keySet()) {
+                System.out.printf("%s - \n", username);
+            }
+
+
+        } while(accessGrades);
+
 
 
 
