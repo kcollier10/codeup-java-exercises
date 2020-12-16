@@ -46,24 +46,27 @@ public class GradesApplication extends Student {
         boolean accessGrades;
 
         do {
-        System.out.println("Here are the GitHub usernames of our students:");
-            for(String username:students.keySet()) {
+            System.out.println("Here are the GitHub usernames of our students:");
+            for (String username : students.keySet()) {
                 System.out.printf(" |%s| ", username);
             }
             // new line for separating string from question
             System.out.println();
 
-            String usernameChoice = userInput.getString("What student would you like to see more information on?").toLowerCase().trim();
+            String usernameChoice = userInput.getString("What student would you like to see more information on?");
 
-            if(students.containsKey(usernameChoice)) {
+            if(!students.containsKey(usernameChoice)) {
+                System.out.printf("Sorry, no student found with the GitHub username of \"%s\".\n", usernameChoice);
+            } else {
                 System.out.println("********************");
                 System.out.printf("Name: %s - GitHub Username: %s\n", students.get(usernameChoice).getName(), usernameChoice);
                 System.out.printf("Current Average: %.2f\n", students.get(usernameChoice).getGradeAverage());
-            } else {
-                System.out.printf("Sorry, no student found with the GitHub username of \"%s\".", usernameChoice);
             }
-
             accessGrades = userInput.yesNo("Would you like to see another student?");
+
+            System.out.println(accessGrades);
+
+
 
 
         } while(accessGrades);
