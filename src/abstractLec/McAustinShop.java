@@ -1,4 +1,4 @@
-package abstractClassesInterface;
+package abstractLec;
 
 import java.util.List;
 

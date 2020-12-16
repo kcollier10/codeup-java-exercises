@@ -1,4 +1,4 @@
-package abstractClassesInterface;
+package abstractLec;
 
 // I am declaring this to be an abstract class
 public abstract class Franchise {

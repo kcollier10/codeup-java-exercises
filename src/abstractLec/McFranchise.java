@@ -1,4 +1,4 @@
-package abstractClassesInterface;
+package abstractLec;
 
 // Declaring this as an 'interface'
 public interface McFranchise {
