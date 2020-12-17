@@ -64,26 +64,17 @@ public class GroceryListApp {
                 System.out.println(fruits.getGroceryList());
                 break;
             case 2:
-                System.out.println(veggies);
+                System.out.println(veggies.getGroceryList());
                 break;
             case 3:
-                System.out.println(petStuff);
+                System.out.println(petStuff.getGroceryList());
                 break;
             case 4:
-                System.out.println(toiletries);
+                System.out.println(toiletries.getGroceryList());
                 break;
         }
-//        if(userChoice == 1) {
-//            System.out.println("Available items under Produce Section: ");
-//            for (String item : items.keySet()) {
-//                System.out.println(item);
-//            }
-//        }
-
-
-
-
     }
+
     public static void categories() {
         System.out.println("Press 1 for fruits list");
         System.out.println("Press 2 for veggies list");
