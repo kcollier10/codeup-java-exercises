@@ -44,7 +44,24 @@ public class GroceryListApp {
 
         Input userInput = new Input();
 
+        System.err.println("**************************************");
         System.out.println("Would you like to create a grocery list?");
+        System.err.println("**************************************");
+
+        boolean userMakeList = userInput.yesNo("Type 'y' to create list, type 'n' to exit.");
+
+        do{
+            if(!userMakeList) {
+                System.out.println("Have a great day!");
+            } else {
+                // run function here to get user input value
+                categoryList();
+            }
+
+
+        }while(userInput);
+
+
 
     }
 
