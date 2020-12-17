@@ -42,8 +42,11 @@ public class GradesApplication extends Student {
         s4.addGrade(94);
         students.put("bobert", s4);
 
+
+
+
+        boolean accessGrades = true;
         Input userInput = new Input();
-        boolean accessGrades;
 
         do {
             System.out.println("Here are the GitHub usernames of our students:");
@@ -62,11 +65,10 @@ public class GradesApplication extends Student {
                 System.out.printf("Name: %s - GitHub Username: %s\n", students.get(usernameChoice).getName(), usernameChoice);
                 System.out.printf("Current Average: %.2f\n", students.get(usernameChoice).getGradeAverage());
             }
-            accessGrades = userInput.yesNo("Would you like to see another student?");
+            Input userInput1 = new Input();
+            accessGrades = userInput1.yesNo("Do you want to continue?");
         } while(accessGrades);
         System.out.println("Goodbye, and have a wonderful day!");
-
-
 
 
     }
