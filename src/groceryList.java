@@ -1,14 +1,27 @@
-import util.Input;
+import java.util.ArrayList;
 
 public class groceryList {
 
-    public static void main(String[] args) {
+    private String category;
+    private ArrayList<String> groceryList;
 
-        System.out.println("Would you like to create a grocery list?");
 
+    public groceryList(String category) {
+        this.category = category;
+        this.groceryList = new ArrayList<>();
     }
 
+    public String getCategory() {
+        return category;
+    }
 
+    public ArrayList<String> getGroceryList() {
+        return groceryList;
+    }
+
+    public void setGroceryList(ArrayList<String> groceryList) {
+        this.groceryList = groceryList;
+    }
 }
 
 

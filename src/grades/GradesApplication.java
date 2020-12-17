@@ -63,12 +63,6 @@ public class GradesApplication extends Student {
                 System.out.printf("Current Average: %.2f\n", students.get(usernameChoice).getGradeAverage());
             }
             accessGrades = userInput.yesNo("Would you like to see another student?");
-
-            System.out.println(accessGrades);
-
-
-
-
         } while(accessGrades);
         System.out.println("Goodbye, and have a wonderful day!");
 
