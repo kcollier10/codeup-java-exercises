@@ -45,25 +45,51 @@ public class GroceryListApp {
         Input userInput = new Input();
 
         System.err.println("**************************************");
-        System.out.println("Would you like to create a grocery list?");
+        System.out.println("Would you like to view a grocery list?");
         System.err.println("**************************************");
 
         boolean userMakeList = userInput.yesNo("Type 'y' to create list, type 'n' to exit.");
 
-        do{
-            if(!userMakeList) {
-                System.out.println("Have a great day!");
-            } else {
-                // run function here to get user input value
-                categoryList();
-            }
+        if(!userMakeList) {
+            System.out.println("Have a great day!");
+        } else {
+            // run function here to get user input value
+          categories();
+        }
 
+        int userChoice = userInput.getInt();
 
-        }while(userInput);
+        switch(userChoice) {
+            case 1:
+                System.out.println(fruits.getGroceryList());
+                break;
+            case 2:
+                System.out.println(veggies);
+                break;
+            case 3:
+                System.out.println(petStuff);
+                break;
+            case 4:
+                System.out.println(toiletries);
+                break;
+        }
+//        if(userChoice == 1) {
+//            System.out.println("Available items under Produce Section: ");
+//            for (String item : items.keySet()) {
+//                System.out.println(item);
+//            }
+//        }
+
 
 
 
     }
-
+    public static void categories() {
+        System.out.println("Press 1 for fruits list");
+        System.out.println("Press 2 for veggies list");
+        System.out.println("Press 3 for pet care list");
+        System.out.println("Press 4 for toiletries list");
+    }
 
 }
+
