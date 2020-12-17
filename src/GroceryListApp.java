@@ -41,12 +41,12 @@ public class GroceryListApp {
         toiletries.addItem("lotion");
         items.put("Toiletries", toiletries);
 
-
-        Input userInput = new Input();
-        boolean userMakeList = userInput.yesNo("Type 'y' to view list, type 'n' to exit.");
         System.err.println("**************************************");
         System.out.println("Would you like to view a grocery list?");
         System.err.println("**************************************");
+
+        Input userInput = new Input();
+        boolean userMakeList = userInput.yesNo("Type 'y' to view list, type 'n' to exit.");
 
         do {
             if (!userMakeList) {
@@ -90,6 +90,10 @@ public class GroceryListApp {
         System.out.println("Press 3 for pet care list");
         System.out.println("Press 4 for toiletries list");
         System.out.println("Press 5 to view all categories and all items");
+    }
+
+    public void addItem() {
+
     }
 
 
