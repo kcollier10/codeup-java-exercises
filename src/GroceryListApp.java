@@ -48,7 +48,7 @@ public class GroceryListApp {
         System.out.println("Would you like to view a grocery list?");
         System.err.println("**************************************");
 
-        boolean userMakeList = userInput.yesNo("Type 'y' to create list, type 'n' to exit.");
+        boolean userMakeList = userInput.yesNo("Type 'y' to view list, type 'n' to exit.");
 
         if(!userMakeList) {
             System.out.println("Have a great day!");
@@ -86,6 +86,7 @@ public class GroceryListApp {
         System.out.println("Press 2 for veggies list");
         System.out.println("Press 3 for pet care list");
         System.out.println("Press 4 for toiletries list");
+        System.out.println("Press 5 to view all categories and all items");
     }
 
 }
