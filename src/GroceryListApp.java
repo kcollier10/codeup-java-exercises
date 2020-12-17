@@ -41,38 +41,47 @@ public class GroceryListApp {
         toiletries.addItem("lotion");
         items.put("Toiletries", toiletries);
 
-
-        Input userInput = new Input();
-
         System.err.println("**************************************");
         System.out.println("Would you like to view a grocery list?");
         System.err.println("**************************************");
 
-        boolean userMakeList = userInput.yesNo("Type 'y' to create list, type 'n' to exit.");
+        Input userInput = new Input();
+        boolean userMakeList = userInput.yesNo("Type 'y' to view list, type 'n' to exit.");
 
-        if(!userMakeList) {
-            System.out.println("Have a great day!");
-        } else {
-            // run function here to get user input value
-          categories();
-        }
+        do {
+            if (!userMakeList) {
+                System.out.println("Have a great day!");
+            } else {
+                // run function here to get user input value
+                categories();
+            }
 
-        int userChoice = userInput.getInt();
+            int userChoice = userInput.getInt();
 
-        switch(userChoice) {
-            case 1:
-                System.out.println(fruits.getGroceryList());
-                break;
-            case 2:
-                System.out.println(veggies.getGroceryList());
-                break;
-            case 3:
-                System.out.println(petStuff.getGroceryList());
-                break;
-            case 4:
-                System.out.println(toiletries.getGroceryList());
-                break;
-        }
+            switch (userChoice) {
+                case 1:
+                    System.out.println(fruits.getGroceryList());
+                    break;
+                case 2:
+                    System.out.println(veggies.getGroceryList());
+                    break;
+                case 3:
+                    System.out.println(petStuff.getGroceryList());
+                    break;
+                case 4:
+                    System.out.println(toiletries.getGroceryList());
+                    break;
+                case 5:
+                    System.out.printf("%s: %s\n", fruits.getCategory(), fruits.getGroceryList());
+                    System.out.printf("%s: %s\n", veggies.getCategory(), veggies.getGroceryList());
+                    System.out.printf("%s: %s\n", petStuff.getCategory(), petStuff.getGroceryList());
+                    System.out.printf("%s: %s\n", toiletries.getCategory(), toiletries.getGroceryList());
+                    break;
+            }
+            Input userInput1 = new Input();
+            userMakeList = userInput1.yesNo("Would you like to view again?");
+
+        } while (userMakeList);
     }
 
     public static void categories() {
@@ -80,7 +89,14 @@ public class GroceryListApp {
         System.out.println("Press 2 for veggies list");
         System.out.println("Press 3 for pet care list");
         System.out.println("Press 4 for toiletries list");
+        System.out.println("Press 5 to view all categories and all items");
     }
+
+    public void addItem() {
+
+    }
+
+
 
 }
 
