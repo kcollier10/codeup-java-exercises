@@ -72,6 +72,12 @@ public class GroceryListApp {
             case 4:
                 System.out.println(toiletries.getGroceryList());
                 break;
+            case 5:
+                System.out.printf("%s: %s", fruits.getCategory(), fruits.getGroceryList());
+                System.out.printf("%s: %s", veggies.getCategory(), veggies.getGroceryList());
+                System.out.printf("%s: %s", petStuff.getCategory(), petStuff.getGroceryList());
+                System.out.printf("%s: %s", toiletries.getCategory(), toiletries.getGroceryList());
+                break;
         }
     }
 
