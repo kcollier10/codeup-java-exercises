@@ -12,7 +12,11 @@ public class groceryList {
     }
 
     public String getCategory() {
-        return category;
+        return this.category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public ArrayList<String> getGroceryList() {
@@ -21,6 +25,10 @@ public class groceryList {
 
     public void setGroceryList(ArrayList<String> groceryList) {
         this.groceryList = groceryList;
+    }
+
+    public void addItem (String item) {
+        this.groceryList.add(item);
     }
 }
 
