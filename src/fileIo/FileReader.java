@@ -77,6 +77,8 @@ public class FileReader {
         System.out.println(filePath); // display the gile path for the passed in arguments
         this.fileLines = Files.readAllLines((this.filePath)); // gives me every line in (i.e. 'day18.txt' as a String, inside of a List<String>
     }
+
+
     // ---------------------------------------------------------------------
     // PSVM - you can think of this as being 20 files away from this file since it's STATIC
     public static void main(String[] args) throws IOException {
@@ -91,6 +93,23 @@ public class FileReader {
         System.out.println("Jolts file, here's the first line:");
         System.out.println(joltsReader.getFileLines().get(0));
 
+        day18Reader.writeToLog("Successfully read the " + day18Reader.getFileName() + " file!");
+
+        joltsReader.writeToLog("Successfully read the " + joltsReader.getFileName() + " file!");
+    }
+
+
+    // ---------------------------------------------------------------------
+    // Custom Method - want to be able to easily write a message to the log, without some enormous nested function calling nonsense
+    // reason for adding "throws IOException" -->
+    public void writeToLog(String message) throws IOException {
+        try {
+            // write the string 'message' to the log file of THIS INSTANCE of a FileReader object
+            Files.write(this.logFilePath, Arrays.asList(message), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            Files.write(this.logFilePath, Arrays.asList(e.getMessage()), StandardOpenOption.APPEND);
+            throw new IOException("Unable to write custom message to log file.");
+        }
     }
 
     // ---------------------------------------------------------------------
