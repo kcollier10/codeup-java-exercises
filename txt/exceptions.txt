@@ -1,0 +1,20 @@
+EXCEPTIONS
+
+- a tool to handle errors
+- built-in exception class = and object with the type Exception
+- usually a message that describes what went wrong
+
+"exceptions are thrown" when an application can't perform an action
+
+Trying to access an index that is out of bounds
+--ArrayIndexOutOfBounds
+
+Try-Catch
+- use this to manage the crashing of an application
+- control flow structure
+- catch blocks go from more to less specific
+- the most specific catch block will execute
+- block scope - cannot access the variables inside the try-catch from the outside
+
+Try
+- the code here will be tried, but it could cause an exception

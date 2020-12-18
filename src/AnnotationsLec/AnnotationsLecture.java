@@ -1,4 +1,4 @@
-package annotationsLecture;
+package AnnotationsLec;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,17 +14,17 @@ public class AnnotationsLecture {
 
         //TODO TOGETHER: Call deprecated method & no comment
         //TODO TOGETHER: Call deprecated method with comment
-//        child1.sayHello();
+        child1.sayHello();
 
 
 
 
         //TODO TOGETHER:Call sayHello without @Override
         //TODO TOGETHER: Comment out annotation and change Parent sayHello no sayHelloParent (Notice there is no error!)
-//        child1.deprecatedMethod();
+        child1.deprecatedMethod();
 
 
-//        doRiskyThings();
+        doRiskyThings();
 
     }
 

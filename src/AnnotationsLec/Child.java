@@ -1,4 +1,4 @@
-package annotationsLecture;
+package AnnotationsLec;
 
 public class Child extends Parent {
     @Override
