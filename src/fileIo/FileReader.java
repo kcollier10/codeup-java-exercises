@@ -54,34 +54,46 @@ public class FileReader {
                 // Add this error message to the log
                 // Files.write(Path filePath, List<String> message(s), appendOption
                 Files.write(this.logFilePath, Arrays.asList(e.getMessage()), StandardOpenOption.APPEND);
+                // append to the end of the log file
                 // can also use:
 //                List<String> errorMessage = new ArrayList<>();
 //                errorMessage.add(e.getMessage());
                 // and put errorMessage in for the Arrays.asList...
                 throw new IOException("Unable to create the data directory (" + this.directoryPath + ")!");
+                // stops all execution
             }
         }
         // Data file ('day18.txt')
-        if(Files.notExists(this.fileName)) {
-
+        if(Files.notExists(this.filePath)) { // i.e. 'src/day18.txt'
+            // if we've made it to this point (inside the if statement), that means the file does not exist - so let's create it!
+            try {
+                Files.createFile(filePath);
+            } catch(IOException e) {
+                Files.write(this.filePath, Arrays.asList(e.getMessage()), StandardOpenOption.APPEND);
+                throw new IOException("Unable to create the file (" + this.filePath + ")!");
+            }
         }
-
-
         // Test if this instantiation worked
         System.out.println(filePath); // display the gile path for the passed in arguments
+        this.fileLines = Files.readAllLines((this.filePath)); // gives me every line in (i.e. 'day18.txt' as a String, inside of a List<String>
     }
-
+    // ---------------------------------------------------------------------
     // PSVM - you can think of this as being 20 files away from this file since it's STATIC
     public static void main(String[] args) throws IOException {
         // Instantiate a FileReader object and see if it works
-        FileReader thisFileReader = new FileReader("data", "day18.txt", "day18.log");
+        FileReader day18Reader = new FileReader("data", "day18.txt", "day18.log");
         // Set up a new instance to access the jolts.txt file
         FileReader joltsReader = new FileReader("src/fileIo", "jolts.txt", "jolts.log");
 
+        System.out.println("Day 18 file, here's the first line:");
+        System.out.println(day18Reader.getFileLines().get(0));
 
+        System.out.println("Jolts file, here's the first line:");
+        System.out.println(joltsReader.getFileLines().get(0));
 
     }
 
+    // ---------------------------------------------------------------------
     // Getters and Setters
     public String getDirectoryName() {
         return directoryName;
