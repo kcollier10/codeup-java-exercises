@@ -1,5 +1,7 @@
 package util;
-import org.w3c.dom.ls.LSOutput;
+
+import static java.lang.Double.parseDouble;
+import static java.lang.Integer.parseInt;
 
 import java.util.Scanner;
 
@@ -14,7 +16,8 @@ public class Input {
     }
 
     public String getString() {
-        System.out.println("Please enter a string:");
+//        System.out.println("Please enter a string:");
+        // adding extra line of text to binary and hex functions
         return this.myScanner.nextLine();
     }
     public String getString(String prompt) {
@@ -54,8 +57,13 @@ public class Input {
 //        return userInput;
 //    }
 
-    public int getInt(int min, int max, String prompt) {
-        return getInt(min, max, "Please enter an int between" + min + " and " + max);
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        return getInt();
+    }
+
+//    public int getInt(int min, int max, String prompt) {
+//        return getInt(min, max, "Please enter an int between" + min + " and " + max);
 //        int input;
 //        do{
 //            System.out.printf("Please enter an int between %d and %d.", min, max);
@@ -63,11 +71,17 @@ public class Input {
 //        }while(input < min || input > max);
 //
 //        return input;
-    }
+//    }
 
     public int getInt () {
-        System.out.println("please enter an integer");
-        return this.myScanner.nextInt();
+        try {
+            System.out.println("Working!");
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.out.println(e.toString());
+//            e.printStackTrace(System.out);
+            return getInt("Please enter an integer");
+        }
     }
 
 //    public double getDouble(double min, double max) {
@@ -80,6 +94,12 @@ public class Input {
 //            return getDouble(min, max);
 //        }
 //    }
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        return getDouble();
+    }
+
     public double getDouble(double min, double max) {
         double input;
         do{
@@ -91,8 +111,44 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("please enter a double:");
-        return myScanner.nextDouble();
+        try {
+//            System.out.println("Working!");
+            return Double.parseDouble(getString());
+            // putting valueOf here will cause intellij to ask if you want to use parseDouble instead
+        } catch (RuntimeException e) {
+            System.out.println(e.toString());
+            e.printStackTrace();
+            return getDouble("Please enter a double (number with decimals).");
+        }
     }
 
+    public int getBinary() {
+        System.out.println("Please enter a number.");
+        try {
+//            System.out.println("Working!");
+            return Integer.parseInt(getString(), 2);
+            // valueOf doesn't work in this specific setup, need to figure that out
+        } catch (NumberFormatException e) {
+            System.out.println(e.toString());
+            System.out.println("Please re-enter a number.");
+            e.printStackTrace();
+            return getBinary();
+        }
+    }
+
+
+    public int getHex() {
+        System.out.println("Please enter a number.");
+        try {
+//            System.out.println("Working!");
+            return Integer.parseInt(getString(), 16);
+            // valueOf doesn't work in this specific setup, need to figure that out
+        } catch (NumberFormatException e) {
+            System.out.println(e.toString());
+            System.out.println("Please re-enter a number.");
+            e.printStackTrace();
+            return getHex();
+        }
+    }
 }
+

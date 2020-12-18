@@ -1,0 +1,60 @@
+EXCEPTIONS
+
+- a tool to handle errors
+- built-in exception class = and object with the type Exception
+- usually a message that describes what went wrong
+
+"exceptions are thrown" when an application can't perform an action
+
+Trying to access an index that is out of bounds
+--ArrayIndexOutOfBounds
+
+Try-Catch
+- use this to manage the crashing of an application
+- control flow structure
+- catch blocks go from more to less specific
+- the most specific catch block will execute
+- block scope - cannot access the variables inside the try-catch from the outside
+
+Try
+- the code here will be tried, but it could cause an exception
+
+Catch
+- code that handles any exceptions
+- We almost always use e the identifier in the catch block
+
+Exception Methods
+--getMessage - returns the exception message as a string
+-printStackTrace - prints results into the console for us (where the exception occurred)
+
+Types of Exceptions
+- Unchecked Exceptions
+    --Mostly exceptions that are built in Java
+    --Do not need to be explicitly dealth with
+    --"compiler doesn't really care about them"
+- Checked Exceptions
+    --MUST be dealt with!
+    --if you have a checked exceptions in your code, your code will not run
+    --Use a try/catch
+    --or by using a method signature
+        --adding a 'throws Exception' into the psvm
+        --won't have as much control if a certain exception is thrown
+    --enforced by the compiler (if not handled, the code will not run)
+- Error
+    --out of scope for now
+    --errors represent something being very wrong
+    --OutOfMemoryError
+
+                              |->   THROWABLE   <-|
+                     EXCEPTION(CHECKED)   |   ERROR(UNCHECKED)
+                            ^             |          ^
+             RuntimeException(Unchecked)  |    OutOfMemoryError
+                ^        |       ^        |
+    NullPointerException |  IOException   |
+                         MyCustomException|
+
+- printStackTrace can be anywhere in console, not always where we think it should be
+
+
+
+
