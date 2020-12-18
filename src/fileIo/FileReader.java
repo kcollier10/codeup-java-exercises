@@ -1,8 +1,13 @@
 package fileIo;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FileReader {
@@ -18,13 +23,61 @@ public class FileReader {
     private List<String> fileLines; // Holding spot for the content inside of the data file itself
     private List<String> logFile;   // Holding spot for the content inside of the log file
 
-    public FileReader(String directoryName, String fileName, String logFileName) {
+    // constructor
+    // Want to send in a directory path and a file name, logFile name, and generate EVERYTHING from just those two values
+    public FileReader(String directoryName, String fileName, String logFileName) throws IOException {
+        // assigning the input to be the value for the corresponding variable above
         this.directoryName = directoryName;
         this.fileName = fileName;
         this.logFileName = logFileName;
-        this.directoryPath = Paths.get(directoryName, fileName);
-        this.filePath = Paths.get(fileName);
-        this.logFilePath = Paths.get(logFileName);
+        // Instantiating Path values
+        this.directoryPath = Paths.get(directoryName);
+        this.filePath = Paths.get(directoryName, fileName);
+        this.logFilePath = Paths.get(directoryName, logFileName);
+
+        // Check if files exist, and create them if they don't currently exist
+        // Log File
+        if(Files.notExists(this.logFilePath)) {
+            try {
+                Files.createFile(this.logFilePath);
+            } catch (IOException e) {
+                // Store this exception message in the log file
+                // if there is an issue creating the log file, let's just crash the whole party and throw an IO Exception
+                throw new IOException("Unable to create the logfile (" + this.logFileName + ")!");
+            }
+        }
+        // Directory for data file ('data'), ('src/fileIo')
+        if(Files.notExists(this.directoryPath)) {
+            try {
+                Files.createDirectories(this.directoryPath);
+            } catch (IOException e) {
+                // Add this error message to the log
+                // Files.write(Path filePath, List<String> message(s), appendOption
+                Files.write(this.logFilePath, Arrays.asList(e.getMessage()), StandardOpenOption.APPEND);
+                // can also use:
+//                List<String> errorMessage = new ArrayList<>();
+//                errorMessage.add(e.getMessage());
+                // and put errorMessage in for the Arrays.asList...
+                throw new IOException("Unable to create the data directory (" + this.directoryPath + ")!");
+            }
+        }
+        // Data file ('day18.txt')
+        if(Files.notExists(this.fileName)) {
+
+        }
+
+
+        // Test if this instantiation worked
+        System.out.println(filePath); // display the gile path for the passed in arguments
+    }
+
+    // PSVM - you can think of this as being 20 files away from this file since it's STATIC
+    public static void main(String[] args) throws IOException {
+        // Instantiate a FileReader object and see if it works
+        FileReader thisFileReader = new FileReader("data", "day18.txt", "day18.log");
+        // Set up a new instance to access the jolts.txt file
+        FileReader joltsReader = new FileReader("src/fileIo", "jolts.txt", "jolts.log");
+
 
 
     }
