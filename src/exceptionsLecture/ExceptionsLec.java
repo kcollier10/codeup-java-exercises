@@ -21,20 +21,20 @@ public class ExceptionsLec {
 
         // TODO: Try/Catch with days array
 
-//        try{
-//            //try this code
-//            String[] days = {"Monday", "Tuesday", "Wednesday"};
-//            System.out.println(days[4]); //ArrayIndexOutOfBoundsException
-//        } catch (ArrayIndexOutOfBoundsException e){
-//            //if that code throws an error, catch it here, and do something!
-//            System.out.println("There is an out of bounds exception with our days array!");
-//            e.printStackTrace(System.out);
-////            e.printStackTrace();
-//        } catch (Exception e){
-//            System.out.println("General Exception");
+        try{
+            //try this code
+            String[] days = {"Monday", "Tuesday", "Wednesday"};
+            System.out.println(days[4]); //ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e){
+            //if that code throws an error, catch it here, and do something!
+            System.out.println("There is an out of bounds exception with our days array!");
+            e.printStackTrace(System.out);
 //            e.printStackTrace();
-//        }
-
+        } catch (Exception e){
+            System.out.println("General Exception");
+            e.printStackTrace();
+        }
+        // can use the general when we're not sure about which error will happen
 
 
 
