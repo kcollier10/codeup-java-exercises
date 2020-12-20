@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    private final Scanner myScanner;
+    private Scanner myScanner;
 
     // new constructor for scanner
     public Input () {
@@ -18,7 +18,7 @@ public class Input {
     public String getString() {
 //        System.out.println("Please enter a string:");
         // adding extra line of text to binary and hex functions
-        return this.myScanner.nextLine();
+        return myScanner.nextLine();
     }
     public String getString(String prompt) {
         System.out.println(prompt);
@@ -33,9 +33,8 @@ public class Input {
     // or
 
     public boolean yesNo() {
-        return yesNo("Please enter yes or no:");
-//        String userInput = myScanner.next();
-//        return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("sure");
+        String userInput = myScanner.nextLine();
+        return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("sure");
     }
 
 
@@ -44,6 +43,8 @@ public class Input {
         String userInput = myScanner.next();
         return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("sure");
     }
+
+
 
 //    public int getInt(int min, int max) {
 //        System.out.println("please enter a value to test if valid between %d and %d.\n:");
